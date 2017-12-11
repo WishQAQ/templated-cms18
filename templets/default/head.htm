@@ -1,0 +1,32 @@
+<header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="hiview.html">嗨社区</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active_"><a href="{dede:global.cfg_basehost/}">首页</a></li>
+                    {dede:channel row='5'  type=top}
+                    <li class="active_[field:global name=autoindex runphp="yes"]@me=@me+1;[/field:global]"><a href="[field:typeurl /]">[field:typename /]</a></li>
+                    {/dede:channel}
+                </ul>
+                <form class="navbar-form navbar-left" name="search" method="post" action="{dede:global.cfg_basehost/}/plus/search.php">
+                    <input type="text" class="form-control col-lg-8" placeholder="搜索" name="keyword">
+                </form>
+                
+            </div>
+        </nav>
+</header>
+<style>
+.navbar-default .navbar-nav > .active_{dede:type}[field:ID /]{/dede:type},
+.navbar-default .navbar-nav > .active_{dede:type}[field:ID /]{/dede:type}:hover,
+.navbar-default .navbar-nav > .active_{dede:type}[field:ID /]{/dede:type}:focus {
+    color: #ffffff;
+    background-color: #03acda;
+}
+</style>

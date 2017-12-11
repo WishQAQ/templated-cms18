@@ -1,0 +1,1 @@
+INSERT INTO `dede_search_keywords` VALUES('1','感受','感受','1','1','1474251908','0','0');

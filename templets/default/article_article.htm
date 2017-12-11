@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{dede:field.title/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_basehost/}/style/bootstrap/css/candy-box.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_basehost/}/style/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_basehost/}/style/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_basehost/}/style/css/style.css" />
+    <!--[if lt IE 9]>
+    <script src="{dede:global.cfg_basehost/}/style/js/html5shiv.js"></script>
+    <script src="{dede:global.cfg_basehost/}/style/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+{dede:include filename='head.htm'/}
+<section class="view-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+                    {dede:field name='position'/}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="view-content-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="view-content-left">
+                    <div class="content-header">
+                        <h2>{dede:field.title/}</h2>
+                        <span><img src="{dede:global.cfg_basehost/}/style/img/img1.jpg" style="float:left;height: 25px;width: 25px;border-radius: 50%;margin-right: 5px">{dede:field.writer/} <i class="fa fa-clock-o"></i>{dede:field.pubdate function='MyDate('Y-m-d',@me)'/}</span>
+                    </div>
+                    <p></p>
+                    <section class="article">{dede:field.body/}</section>
+                    <hr />
+                    <span class="pull-left">点赞：</span>
+                    <div class="author-socials pull-right">
+                        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="view-content-right">
+                    {dede:arclist row='1' orderby='rand' type='image.'}
+                    <a href="[field:arcurl /]" target="_blank"><img src="[field:picname /]" class="img-responsive" /></a>
+                    {/dede:arclist}
+                </div>
+                <div class="view-content-right">
+                    <h1>热门文章</h1>
+                    <div class="aside-top">
+                        {dede:arclist row='4' orderby='click' type='image.'}
+                        <a href="[field:arcurl /]"><img src="[field:picname /]" style="float:left;height: 40px;width: 40px;border-radius: 50%;margin-right: 15px">[field:title /]</a>
+                        {/dede:arclist}
+                    </div>
+                </div>
+                <div class="view-content-right" style="margin: 20px 0;">
+                    {dede:arclist row='1' orderby='rand' type='image.'}
+                    <a href="[field:arcurl /]" target="_blank"><img src="[field:picname /]" class="img-responsive" /></a>
+                    {/dede:arclist}
+                </div>
+
+                <div class="view-content-right">
+                    <h1>其他文章</h1>
+                    <div class="aside-top">
+                        {dede:arclist row='4' orderby='pubdate' type='image.'}
+                        <a href="[field:arcurl /]"><img src="[field:picname /]" style="height: 40px;width: 40px;border-radius: 50%;margin-right: 15px">[field:title /]</a>
+                        {/dede:arclist}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{dede:include filename='footer.htm'/}
+</body>
+</html>

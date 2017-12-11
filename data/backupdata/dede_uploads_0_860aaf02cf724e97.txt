@@ -1,0 +1,4 @@
+INSERT INTO `dede_uploads` VALUES('1','1','青山清水客家人，方圆土楼独奇葩','/uploads/allimg/160918/1I04A1C-0.jpg','1','600','389','0','79789','1474191046','1');
+INSERT INTO `dede_uploads` VALUES('2','1','青山清水客家人，方圆土楼独奇葩','/uploads/allimg/160918/1I0462258-1.jpg','1','600','329','0','46417','1474191046','1');
+INSERT INTO `dede_uploads` VALUES('3','1','青山清水客家人，方圆土楼独奇葩','/uploads/allimg/160918/1I0464234-2.jpg','1','600','350','0','58280','1474191046','1');
+INSERT INTO `dede_uploads` VALUES('4','1','青山清水客家人，方圆土楼独奇葩','/uploads/allimg/160918/1I04B015-3.jpg','1','600','389','0','60091','1474191046','1');

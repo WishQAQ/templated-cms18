@@ -1,0 +1,1 @@
+<a href="[field:arcurl /]"><img src="[field:picname /]" style="float:left;height: 40px;width: 40px;border-radius: 50%;margin-right: 15px">[field:title /]</a>
